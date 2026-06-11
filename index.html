@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>合同会社みらい研究所 | MIRAI KENKYUJO, LIMITED LIABILITY COMPANY</title>
+<meta name="description" content="合同会社みらい研究所はモバイル・PC向けゲームの企画・開発を行う会社です。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#181c2e;
+    --ink-soft:#3c4258;
+    --paper:#fbfaf7;
+    --line:#d9d6cd;
+    --accent:#2f6f6a;
+    --accent-soft:#e4efee;
+    --gold:#b9912f;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
+  body{
+    font-family:"Zen Kaku Gothic New",-apple-system,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.8;
+    font-size:16px;
+  }
+  .wrap{max-width:860px;margin:0 auto;padding:0 24px;}
+
+  /* header */
+  header{
+    border-bottom:1px solid var(--line);
+    background:var(--paper);
+  }
+  .header-inner{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:18px 0;
+  }
+  .brand{
+    font-family:"Shippori Mincho",serif;
+    font-weight:600;font-size:1.05rem;letter-spacing:.08em;
+    color:var(--ink);text-decoration:none;
+    display:flex;align-items:center;gap:10px;
+  }
+  .brand svg{display:block;}
+  nav a{
+    color:var(--ink-soft);text-decoration:none;font-size:.85rem;
+    margin-left:22px;letter-spacing:.05em;
+  }
+  nav a:hover, nav a:focus-visible{color:var(--accent);}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px;}
+
+  /* hero */
+  .hero{
+    padding:88px 0 72px;
+    border-bottom:1px solid var(--line);
+  }
+  .hero .en{
+    font-size:.78rem;letter-spacing:.32em;color:var(--gold);
+    text-transform:uppercase;margin-bottom:20px;
+  }
+  .hero h1{
+    font-family:"Shippori Mincho",serif;
+    font-weight:600;font-size:clamp(1.7rem,4.5vw,2.6rem);
+    letter-spacing:.06em;line-height:1.5;
+  }
+  .hero p.lead{
+    margin-top:24px;color:var(--ink-soft);max-width:38em;
+  }
+
+  /* sections */
+  section{padding:64px 0;border-bottom:1px solid var(--line);}
+  .sec-label{
+    display:flex;align-items:baseline;gap:14px;margin-bottom:28px;
+  }
+  .sec-label h2{
+    font-family:"Shippori Mincho",serif;font-weight:600;
+    font-size:1.3rem;letter-spacing:.1em;
+  }
+  .sec-label .en{
+    font-size:.72rem;letter-spacing:.22em;color:var(--gold);text-transform:uppercase;
+  }
+
+  .biz-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  @media(max-width:640px){.biz-grid{grid-template-columns:1fr;}}
+  .biz{
+    border:1px solid var(--line);background:#fff;
+    padding:24px 22px;border-radius:4px;
+  }
+  .biz h3{font-size:1rem;letter-spacing:.05em;margin-bottom:8px;color:var(--accent);}
+  .biz p{font-size:.9rem;color:var(--ink-soft);}
+
+  .notice{
+    margin-top:26px;padding:16px 20px;background:var(--accent-soft);
+    border-radius:4px;font-size:.88rem;color:var(--ink-soft);
+  }
+
+  /* company table */
+  table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:4px;overflow:hidden;}
+  th,td{padding:14px 18px;text-align:left;font-size:.92rem;border-bottom:1px solid var(--line);vertical-align:top;}
+  tr:last-child th, tr:last-child td{border-bottom:none;}
+  th{width:9em;font-weight:500;color:var(--ink-soft);background:#f4f2ec;letter-spacing:.05em;}
+  td a{color:var(--accent);}
+
+  /* contact */
+  .contact-card{
+    background:#fff;border:1px solid var(--line);border-radius:4px;
+    padding:30px 28px;text-align:center;
+  }
+  .contact-card p{color:var(--ink-soft);font-size:.92rem;}
+  .mail{
+    display:inline-block;margin-top:12px;
+    font-family:"Shippori Mincho",serif;font-size:1.25rem;letter-spacing:.05em;
+    color:var(--ink);text-decoration:none;
+    border-bottom:2px solid var(--gold);padding-bottom:2px;
+  }
+  .mail:hover{color:var(--accent);border-color:var(--accent);}
+
+  footer{padding:36px 0 48px;}
+  .foot-inner{
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
+    font-size:.8rem;color:var(--ink-soft);
+  }
+  footer a{color:var(--ink-soft);}
+  footer a:hover{color:var(--accent);}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <a class="brand" href="/">
+      <!-- tower mark -->
+      <svg width="22" height="26" viewBox="0 0 22 26" aria-hidden="true">
+        <g fill="none" stroke="#2f6f6a" stroke-width="1.6">
+          <rect x="7" y="2" width="8" height="5"/>
+          <rect x="5" y="9" width="12" height="6"/>
+          <rect x="3" y="17" width="16" height="7"/>
+        </g>
+        <circle cx="11" cy="4.5" r="1.1" fill="#b9912f" stroke="none"/>
+      </svg>
+      合同会社みらい研究所
+    </a>
+    <nav aria-label="メイン">
+      <a href="#business">事業内容</a>
+      <a href="#company">会社概要</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <p class="en">MIRAI KENKYUJO, LIMITED LIABILITY COMPANY — Game Studio</p>
+      <h1>小さなチームで、<br>長く遊ばれるゲームを研究する。</h1>
+      <p class="lead">合同会社未来研究所は、モバイルおよびPC向けゲームの企画・開発・運営を行うゲームスタジオです。一段ずつ積み上げる設計と検証を重ね、手のひらの中で長く愛されるタイトルづくりに取り組んでいます。</p>
+    </div>
+  </div>
+
+  <section id="business">
+    <div class="wrap">
+      <div class="sec-label"><h2>事業内容</h2><span class="en">Business</span></div>
+      <div class="biz-grid">
+        <div class="biz">
+          <h3>ゲームの企画・開発</h3>
+          <p>スマートフォン（Android / iOS）およびPC（Steam）向けオリジナルゲームの企画・開発を行っています。</p>
+        </div>
+        <div class="biz">
+          <h3>ゲームの運営・配信</h3>
+          <p>自社タイトルの配信・アップデート・ユーザーサポートまでを一貫して行います。</p>
+        </div>
+      </div>
+      <p class="notice">現在、塔を一段ずつ登りながら成長していくスマートフォン向けRPG（タイトル未発表）を開発中です。リリース情報は本サイトにてお知らせします。</p>
+    </div>
+  </section>
+
+  <section id="company">
+    <div class="wrap">
+      <div class="sec-label"><h2>会社概要</h2><span class="en">Company</span></div>
+      <table>
+        <tr><th>商号</th><td>合同会社みらい研究所</td></tr>
+        <tr><th>英文社名</th><td>MIRAI KENKYUJO, LIMITED LIABILITY COMPANY</td></tr>
+        <tr><th>代表</th><td>松田智貴</td></tr>
+        <tr><th>所在地</th><td>〒730-0029<br>広島県広島市中区三川町3番18-903号</td></tr>
+        <tr><th>設立</th><td>2024年2月</td></tr>
+        <tr><th>事業内容</th><td>ゲームソフトウェアの企画・開発・運営</td></tr>
+        <tr><th>連絡先</th><td><a href="mailto:mirailoveratory@gmail.com
+">mirailoveratory@gmail.com
+</a></td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="sec-label"><h2>お問い合わせ</h2><span class="en">Contact</span></div>
+      <div class="contact-card">
+        <p>当社へのお問い合わせは、下記メールアドレスまでお願いいたします。<br>内容を確認のうえ、担当者より折り返しご連絡いたします。</p>
+        <a class="mail" href="mailto:mirailoveratory@gmail.com
+">mirailoveratory@gmail.com
+</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <span>© 2026 MIRAI KENKYUJO, LIMITED LIABILITY COMPANY</span>
+    <a href="/privacy.html">プライバシーポリシー</a>
+  </div>
+</footer>
+
+</body>
+</html>
